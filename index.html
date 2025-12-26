@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <style>
+        html,
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #upload-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div className="main-wrapper">
+        <div id="upload-form">
+            <label>Upload your .obj model:</label>
+            <input type="file" accept=".obj" id="fileEl" />
+            <div id="fileStatus"></div>
+        </div>
+        <canvas id="canvasEl"></canvas>
+        <script src="./script.js"></script>
+    </div>
+</body>
+</html>
